@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TypeScript Unit teszt feladat</title>
+	<script src="<!-- ide linkejük a lefordított script-et -->"></script>
+	<script src="testBaseTSUnit.js"></script>
+	</script>
+</head>
+
+<body>
+	<div></div>
+	<hr>
+	<div id="testResult">
+		<h2>Tesztek</h2>
+	</div>
+
+	<script>
+		//1. feladat:
+
+		function osszesOszto(szam) {
+			var osztok = [];
+			for (var i = 1; i <= szam; i++) {
+				if (szam % i === 0) {
+					osztok.push(i);
+				}
+			}
+			return osztok;
+		}
+
+		//2. feladat:
+
+		function parosDarab(szamTomb) {
+			var parosDb = 0;
+			for (var i = 0; i < szamTomb.length; i++) {
+				if (szamTomb[i] % 2 === 0) {
+					parosDb++;
+				}
+			}
+			return parosDb;
+		}
+		// 3. feladat: 
+
+		function fuggvenyhivasPalindrom(fuggveny) {
+			var eredetiSzoveg = fuggveny().replace(/\s/g, '');
+			var fordítottSzoveg = eredetiSzoveg.split('').reverse().join('');
+			return eredetiSzoveg === fordítottSzoveg;
+		}
+
+	</script>
+</body>
+
+</html>
